@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vertical Box (Box Model) Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f4f6fb
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .panel {
+            width: 900px;
+            max-width: 95%;
+            background: linear-gradient(180deg, #9aa7f0 0%, #b9c4f8 60%);
+            border-radius: 28px;
+            padding: 48px 36px;
+            box-shadow: 0 10px 30px rgba(44, 62, 120, 0.18);
+            color: #0e1340;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .panel h1 {
+            text-align: center;
+            font-size: 44px;
+            margin-bottom: 28px;
+            letter-spacing: 0.6px;
+            font-weight: 700;
+            color: #0d1440;
+        }
+
+
+        .stack {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            align-items: center;
+            padding: 12px 20px 30px;
+        }
+
+
+        .card {
+            width: 72%;
+            min-width: 260px;
+            max-width: 640px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 18px 22px;
+            box-shadow: 0 6px 18px rgba(12, 20, 48, 0.08);
+            text-align: center;
+            border: 1px solid rgba(10, 14, 30, 0.04);
+        }
+
+        .card .title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #222642;
+            margin-bottom: 8px;
+        }
+
+        .card .value {
+            font-size: 40px;
+            font-weight: 800;
+            color: #11121a;
+            letter-spacing: 1px;
+        }
+
+        .card.feature {
+            width: 58%;
+            padding: 28px 30px;
+            border-radius: 12px;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96));
+            transform: translateY(6px);
+        }
+
+        .card.feature .value {
+            font-size: 64px;
+            color: #111;
+        }
+
+        .panel .sub {
+            text-align: center;
+            color: rgba(12, 18, 40, 0.85);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        @media (max-width:720px) {
+            .panel {
+                padding: 28px 18px
+            }
+
+            .panel h1 {
+                font-size: 28px
+            }
+
+            .card {
+                width: 92%
+            }
+
+            .card.feature {
+                width: 92%
+            }
+
+            .card .value {
+                font-size: 28px
+            }
+
+            .card.feature .value {
+                font-size: 44px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="panel" role="region" aria-label="CTC panel example">
+            <h1>Highest &amp;\nAverage CTC</h1>
+
+            <div class="stack">
+                <div class="card" style="margin-top:4px">
+                    <div class="title">Average CTC</div>
+                    <div class="value">₹6.1 LPA</div>
+                </div>
+                <div class="card">
+                    <div class="title">Highest CTC</div>
+                    <div class="value">₹36 LPA</div>
+                </div>
+                <div class="card feature">
+                    <div class="title">Expected Increase in<br />Salary Potential</div>
+                    <div class="value">60%</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
